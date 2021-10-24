@@ -10,4 +10,12 @@ void main() {
 
   var angka = 3;
   print((angka % 2 == 0) ? 'Genap' : 'Ganjil');
+
+  var number1 = 5;
+  var number2 = number1 ?? 10;
+  print(number2);
+
+  var number3 = null;
+  var number4 = number3 ?? 10;
+  print(number4);
 }
