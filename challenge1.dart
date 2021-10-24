@@ -1,5 +1,4 @@
 void main() {
-
   /* 
   Challenge 1
   1. Buatlah variabel dari data dibawah sesuai dengan tipe datanya!
@@ -11,7 +10,7 @@ void main() {
   -------------
   Nama: Rifqi Seafood
   Tahun Didirikan: 2000
-  Pemilik: Riqi Eka Hardianto
+  Pemilik: Rifqi Eka Hardianto
   Alamat: Jl. Bhayangkara, Jakarta
   Telepon: 08123456789
   Status Buka: Buka (Buka/Tutup)
@@ -21,8 +20,43 @@ void main() {
     - Udang Asam Manis (50rb)
     - Sate Cumi (30rb)
   Daftar Minuman: 
-  
+    - Es Jeruk (5rb)
+    - Es Kelapa (10rb)
+    - Es Teh (3rb)
 
+  */
 
+  //Jawaban no.1
+  String nama = 'Rifqi Seafood';
+  int tahun = 2000;
+  String pemilik = 'Rifqi Eka Hardianto';
+  String alamat = 'Jl. Bhayangkara, Jakarta';
+  int telepon = 08123456789;
+  bool buka = true;
+  List<Map> daftarMakanan = [
+    {'nama': 'Kepiting Rebus', 'harga': 40000},
+    {'nama': 'Nasi Goreng', 'harga': 20000},
+    {'nama': 'Udang Asam Manis', 'harga': 50000},
+    {'nama': 'Sate Cumi', 'harga': 30000}
+  ];
+  List<Map> daftarMinuman = [
+    {'nama': 'Es Jeruk', 'harga': 5000},
+    {'nama': 'Es Kelapa', 'harga': 10000},
+    {'nama': 'Es Teh', 'harga': 3000}
+  ];
 
-}
+  //Jawaban no.2
+  Map restoran = {
+    'nama' = nama,
+    'tahun' = tahun,
+    'pemilik' = pemilik,
+    'alamat' = alamat,
+    'telepon' = telepon,
+    'statusBuka' = buka,
+    'daftarMakanan' = daftarMakanan,
+    'daftarMinuman' = daftarMinuman,
+  };
+
+  //Jawban no.3
+  print(restoran);
+
