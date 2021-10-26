@@ -21,28 +21,36 @@
 */
 
 void main() {
-  RekeningBank rekeningBank = new RekeningBank();
+  RekeningBank rekeningAsrafil = new RekeningBank();
 
-  rekeningBank.transfer();
-  rekeningBank.ambilSaldo();
+  rekeningAsrafil.transfer();
+  rekeningAsrafil.ambilSaldo();
 
-  rekeningBank.namaPemilik = 'Asrafirrizal';
-  rekeningBank.saldo = 10000000000;
-  rekeningBank.namaBank = 'BSI';
+  rekeningAsrafil.namaPemilik = 'Asrafirrizal';
+  rekeningAsrafil.saldo = 10000000000;
+  rekeningAsrafil.namaBank = 'BSI';
 
-  print(rekeningBank.saldo);
-  print(rekeningBank.namaPemilik);
-  print(rekeningBank.namaBank);
-  rekeningBank.cekSaldo();
+  print(rekeningAsrafil.saldo);
+  print(rekeningAsrafil.namaPemilik);
+  print(rekeningAsrafil.namaBank);
+  rekeningAsrafil.cekSaldo();
+
+  RekeningBank rekeningRifqi =
+      new RekeningBank(namaPemilik: 'Rifqi', namaBank: 'ATB', saldo: 5000000);
+  print('');
+  print('ini Rekening Rifqi');
+  rekeningRifqi.cekSaldo();
 }
 
 class RekeningBank {
-  late String namaPemilik;
-  late String namaBank;
-  late int saldo;
+  String? namaPemilik;
+  String? namaBank;
+  int? saldo;
+
+  RekeningBank({this.namaPemilik, this.namaBank, this.saldo});
 
   cekSaldo() {
-    print('Saldo saat ini adalah : $saldo');
+    print('Saldo $namaPemilik saat ini adalah : $saldo');
   }
 
   transfer() {
